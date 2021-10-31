@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class = "outputs">
+
+
+    </div>
+
+
+
+
+    <div class="forms">
+            <p>
+                <label for="marka">Введите марку авто:</label>
+                <input type="text" name="name" id="marka" required>
+            </p>
+
+            <p>
+                <label for="model">Введите модель авто:</label>
+                <input type="text" name="name" id="model" required>
+            </p>
+
+            <p>
+                <label for="photo">Введите фото авто:</label>
+                <input type="photo" name="name" id="photo" required>
+            </p>
+
+            <p>
+                <label for="power">Введите мощность авто:</label>
+                <input type="text" name="name" id="power" required>
+            </p>
+
+            <button >Отправить информацию</button>
+
+    </div>
+</body>
+</html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<script>
+    let list = [];
+
+    $("button").click(function(){
+
+        let markAuto = $('#marka').val();
+        $('#marka').val('');
+        let modelAuto = $('#model').val();
+        $('#model').val('');
+        let photoAuto = $('#photo').val();
+        $('#photo').val('');
+        let powerAuto = $('#power').val();
+        $('#power').val('');
+
+        let car = {}
+        car.marka = markAuto;
+        car.model = modelAuto;
+        car.photo = photoAuto;
+        car.power = powerAuto;
+
+
+        list.push(car)
+
+        console.log(list);
+
+
+        for (let i = 0; i < list.length; i++) {
+
+            document.querySelector('.outputs').innerHTML += "<div>" + list[i].marka + "</div>"
+            document.querySelector('.outputs').innerHTML += "<div>" + list[i].model + "</div>"
+            document.querySelector('.outputs').innerHTML += "<div><img src=" + list[i].photo + "/></div>"
+            document.querySelector('.outputs').innerHTML += "<div>" + list[i].power + "</div>"
+
+}
+
+      
+    });
+
+
+    
+
+
+</script>
+
+
+
+// Создаем форму для создания авто
+// 4 поля  - марка-модель-фото-мощность
+
+//Создаем кнопку по нажатию на которую появляется новая верстка авто
+
+// при перезагрузке все авто сохраняются
+
+
+ШАГИ
+
+// Создаем поля
+
+// Создаем кнопки
+
+
+// Вешаем события
+
+// Делаем функцию добавления нового авто в массив
+    // Собираем поля из формы их значения
+    // Создаем ассоциативный массив 
+    // Добавляем значения в массив ассоциативный
+    // Добавляем этот массив к массиву автомобилей
+    // Стираем верстку что была
+    // Запускаем функцию отрисовки всех авто
+
+
+
+
+// Создаем массив авто (лучше в самом верху поля)
+
+// Делаем функцию отрисовки машин
+
+    // считываем в цикле данные из массива авто и вставляем в верстку
+
+    // добавляем верстку на экран
